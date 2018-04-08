@@ -10,7 +10,11 @@ cd /path/to/mg/lib && make
 ## Description
 At it's core, MGLib is a platform layer. It interfaces with the underlying platform and exposes useful functions for drawing. It is intended to lower the bar of entry for learning graphics code.
 
-## Future
+## Future Plans
+* Documentation
+* Adding OpenGL implementation on Windows
+* Adding DirectX 11 on Windows
+* Ability to use custom shaders
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
