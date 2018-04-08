@@ -2,11 +2,9 @@
 A Miniature Graphics Library
 
 ## Getting Started
+### Macos
 ```
-#include <mg.h>
-```
-```
-int mg_initialize(char *app_name);
+cd /path/to/mg/lib && make
 ```
 
 ## Description
@@ -15,7 +13,7 @@ At it's core, MGLib is a platform layer. It interfaces with the underlying platf
 ## Future
 
 ## License
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgements
 * Thanks [Sean Barrett](https://github.com/nothings/stb) for stb_image.h 
