@@ -15,49 +15,6 @@
 
 
 /*
-
-  The main difference between MLX and MG is that the main control of
-  your loop is put into the hands of MLX, and the API gives you
-  specific "access points" or "hooks" into the running loop.
-  While this works, and is easy to wrap your head around, it becomes a
-  burden the moment you try to do something non-trivial.
-  I believe the control should be in the hands of the person designing
-  the app, not the graphics API. MG still maintains control of the
-  OS message loop, but the user has control of the drawing loop.
-
-  MG tries to mirror APIs which you will see when you code in the
-  real world. It is a step in the direction of a library like SDL,
-  but it remains simplified enough for beginners in graphics to get going
-  quickly with minimal issues. It is cross platform, runs on
-  OpenGL 3.2 Core for MacOS and Direct3D 11 on Windows. And it allows
-  those who are adventurous to explore further into some of the more
-  in-depth graphics features, like shaders.
-
-  The three main focus points in developing MG are the following
-  1) Allow users to make graphics projects without the library
-  		getting in the way
-  2) Provide a style of API that will be familiar when the user moves
-  		to a more fully featured library
-  3) Provide source that is easily reverse-engineered, so that
-  		students can learn from it.
-
-  MG does not attempt to teach how to interface with the operating system
-  in any sort of 'proper' or 'recommended' way, it is merely designed
-  for readability and usability above all else. It is also not meant to
-  be a shippable api, i.e. it's for small to mid sized personal projects
-  and learning, you should use something more robust when you become
-  serious about a project.
-
-  MLX mostly uses the concept of 'images' being sort of a solid construct,
-  you can get and manipulate the image data, which is much faster than the
-  'mlx_pixel_put' api, but there is a major problem with this method,
-  that OpenGL doesn't really have the notion of an image, it has texture
-  data, which is then mapped to some vertices which are set by the user,
-  just like you would set vertices for a non-textured triangle.
-
-*/
-
-/*
 ** MiniGraphics Library
 ** By: Nick Mayfield
 */
