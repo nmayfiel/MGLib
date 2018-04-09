@@ -1,5 +1,5 @@
 # MGLib
-A Miniature Graphics Library
+A Miniature Graphics Library for Learning
 
 ## Getting Started
 ### Macos
@@ -8,13 +8,16 @@ cd /path/to/mg/lib && make
 ```
 
 ## Description
-At it's core, MGLib is a platform layer. It interfaces with the underlying platform and exposes useful functions for drawing. It is intended to lower the bar of entry for learning graphics code.
+At it's core, MGLib is a platform layer. It interfaces with the underlying platform and exposes useful functions for drawing. Robustness and performance were not considered to be first-order priorities in designing this library. It is intended to lower the bar of entry for students interested in learning graphics and platform interface code. This means that the value given first consideration here is readability, both on the user side, which requires a dead-simple API, and the library side, which requires a straight-forward implementation.
 
 ## Future Plans
 * Documentation
-* Adding OpenGL implementation on Windows
-* Adding DirectX 11 on Windows
+* Keyboard input
+* OpenGL implementation on Windows
+* DirectX 11 on Windows
+* Gamepad input
 * Ability to use custom shaders
+* Shippable version?
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
