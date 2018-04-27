@@ -168,7 +168,7 @@ static void	mgiRendering2D(mg__s32 shader_index)
     glUniform1f(mgiTimeUniforms[shader_index], mgiGlobalTime);
 }
 
-static void		mgiCreateAppMenu(char *app_name)
+static void		mgiCreateAppMenu(const char *app_name)
 {
     @autoreleasepool
     {
@@ -216,7 +216,7 @@ static void		mgiCreateAppMenu(char *app_name)
 /////////////////////////////////////////////////////////////
 
 
-MGDEF int	mg_initialize(char *app_name)
+MGDEF int	mg_initialize(const char *app_name)
 {
     assert(!mgiInitialized);
 
@@ -283,6 +283,9 @@ MGDEF int	mg_initialize(char *app_name)
     memset(&m[0], 0, sizeof(mgiQuadVertex) * 4);
     glBufferData(GL_ARRAY_BUFFER, 4 * sizeof(mgiQuadVertex), &m[0], GL_STREAM_DRAW);
 
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    
     assert((glGetError() == 0));
     
     mgiDebugPrintLine("MiniLibGraphics Initialized...");
@@ -356,7 +359,7 @@ MGDEF int	mg_open_window_with_opts(mg_window_opts_t opts)
 }
 
 // @MOVE_TO_C
-MGDEF unsigned int	mg_load_texture(char *filename, int *width,
+MGDEF unsigned int	mg_load_texture(const char *filename, int *width,
                             int *height, unsigned char **data)
 {
     int bytes_per_pixel;

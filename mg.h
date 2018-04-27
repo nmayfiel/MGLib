@@ -57,12 +57,12 @@ typedef enum 	mg_dim_type_e
 #define MGDEF extern
 #endif
 
-MGDEF int			mg_initialize(char *app_name);
+MGDEF int			mg_initialize(const char *app_name);
 
-MGDEF int			mg_open_window_with_name(char *name);
+MGDEF int			mg_open_window_with_name(const char *name);
 MGDEF int			mg_open_window_with_opts(mg_window_opts_t window);
 
-MGDEF unsigned int	mg_load_texture(char *filename,
+MGDEF unsigned int	mg_load_texture(const char *filename,
                                     int *width, int *height,
                                     unsigned char **data);
 MGDEF void			mg_free_texture_data(unsigned char *data);
