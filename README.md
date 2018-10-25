@@ -6,6 +6,14 @@ A Miniature Graphics Library for Learning and Prototyping
 ```
 cd /path/to/mg/lib && make
 ```
+in your main
+```
+#include <mg.h>
+```
+C++ compilation example
+```
+clang++ my_main.cpp -Img/ -Lmg/ -lmg -framework AppKit -framework OpenGL
+```
 
 ## Description
 MGLib at its core, is a platform layer. MGLib interfaces with the underlying platform and exposes useful functions for drawing. MGLib doesn't really take a unique approach to hooking into the platform. The API is intentionally similar to some of the most popular open source graphics libraries in use today to make porting simpler.
