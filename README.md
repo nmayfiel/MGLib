@@ -6,13 +6,25 @@ A Miniature Graphics Library for Learning and Prototyping
 ```
 cd /path/to/mg/lib && make
 ```
-in your main
+In your code
 ```
 #include <mg.h>
+
+int main(int argc, char **argv)
+{
+    mg_initialize("My App Name");
+    // Use MG Lib here..
+    return (0);
+}
 ```
-C++ compilation example
+Compilation examples
+#### C
 ```
-clang++ my_main.cpp -Img/ -Lmg/ -lmg -framework AppKit -framework OpenGL
+gcc my_main.c -Ipath/to/mglib/ -Lpath/to/mglib/ -lmg -framework AppKit -framework OpenGL -o my_executable_name
+```
+#### C++
+```
+clang++ my_main.cpp -Ipath/to/mglib/ -Lpath/to/mglib/ -lmg -framework AppKit -framework OpenGL -o my_executable_name
 ```
 
 ## Description
