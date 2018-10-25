@@ -2,6 +2,8 @@
 A Miniature Graphics Library for Learning and Prototyping
 
 ## Getting Started
+### Windows
+Still working on this
 ### Macos
 ```
 cd /path/to/mg/lib && make
