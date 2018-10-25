@@ -4,5 +4,6 @@
 const char *shader_source_vertex;
 const char *shader_source_fragment;
 const char *tex_shader_source_fragment;
+const char *blending_tex_shader_source_fragment;
 
 #endif

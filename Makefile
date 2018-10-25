@@ -2,8 +2,8 @@
 # Nick Mayfield (@PSDRNDM)
 
 NOM		= libmg.a
-FNS		= macos/mg.m macos/MacosPlatformInterface.m macos/MacosDebug.c \
-		  opengl/default_shaders.c
+FNS		= macos/mg.m macos/MacosPlatformInterface.m \
+		  macos/MacosDebug.c opengl/default_shaders.c
 
 OBJX		= $(FNS:.c=.o)
 OBJ		= $(OBJX:.m=.o)

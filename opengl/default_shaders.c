@@ -55,6 +55,30 @@ void main()												\
 }														\
 ";
 
+const char *blending_tex_shader_source_fragment = "		\
+#version 330 core										\
+														\
+uniform sampler2D texture_sample;						\
+uniform float in_time;									\
+in vec2 frag_uv;										\
+in vec4 frag_color;										\
+out vec4 outColor;										\
+														\
+void main()												\
+{														\
+	vec4 txc = texture(texture_sample, frag_uv); 		\
+	if (txc.a > 0)										\
+	{													\
+		float newa = txc.a - (1.0 - frag_color.a);	   	\
+		outColor = vec4(frag_color.rgb, newa);		   	\
+	}													\
+	else												\
+	{													\
+		discard;										\
+	}													\
+}														\
+";
+
 const char *flashing_tex_shader_source_fragment = "				\
 #version 330 core												\
 																\

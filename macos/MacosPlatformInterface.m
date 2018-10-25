@@ -70,6 +70,15 @@
     return self;
 }
 
+
+// @NOTE These two prevent the 'doonk' noise
+///////////////////////////////
+//////////////////////////////
+- (BOOL)acceptsFirstResponder { return YES; }
+- (void)keyDown: (NSEvent *)theEvent {}
+///////////////////////////////
+//////////////////////////////
+
 - (void)prepareOpenGL
 {
     [super prepareOpenGL];

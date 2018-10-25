@@ -18,6 +18,7 @@ On the other hand, a library which is dead-simple to use but can't run a graphic
 * Documentation
 * Font rendering
 * Keyboard input
+* Thread Safety
 * OpenGL implementation on Windows
 * DirectX 11 on Windows
 * Gamepad input
